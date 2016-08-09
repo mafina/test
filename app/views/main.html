@@ -1,0 +1,25 @@
+<h1>Test</h1>
+<div id="form--container">
+	<form accept-charset="utf-8" novalidate>
+		<label for="repoName">Username : </label>
+		<input type="text" name="repoName" autofocus placeholder="username of repo" ng-model="repoName.name">
+		<button type="submit" class="btn" ng-click="getListOfRepos()">Get list of repos</button>
+		<div class="err" ng-class="{'not--found': err.errNumber == 404, 'request--successful': err.errNumber == 200, 'request--timeout': err.errNumber == 408}">{{err.statusText}}</div>
+	</form>
+</div>
+<div id="results--container">
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>Repository name</th>
+				<th>Repository Url</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="repo in repoData">
+				<td>{{repo.name}}</td>
+				<td><a ng-href="{{repo.url}}" target="_blank">{{repo.url}}</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

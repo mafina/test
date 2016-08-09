@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <!-- BOOTSTRAP CSS-->
+    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.min.css">
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body ng-app="webApp">
+
+    <div class="container" ng-include="'views/main.html'" ng-controller="MainController"></div>
+
+<!-- ANGULAR JS-->
+<script src="../bower_components/angular/angular.min.js"></script>
+<!-- BOOTSTRAP JS-->
+<script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<!-- APP JS -->
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/mainController.js"></script>
+<script src="scripts/services/services.js"></script>
+</body>
+</html>
