@@ -8,10 +8,10 @@ angular.module('webApp')
             getReposForUserService.getRepos($scope.repoName.name).then(
             function(res){
                 $scope.err = {};
-                $scope.repoData = res.data;                
+                $scope.repoData = res.data;       
             }, function(err){
                 $scope.repoData = [];
-                $scope.err = httpStatusCodes[err.status];          
+                $scope.err = httpStatusCodes[err.status]; 
             });
         };
 

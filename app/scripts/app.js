@@ -1,4 +1,4 @@
-angular.module('webApp', ['ui.bootstrap'])
+angular.module('webApp', [])
 	.constant('httpStatusCodes', {
 		"200": {errNumber: 200, statusText: "Successful"},
 		"404": {errNumber: 404, statusText: "Not Found!"},		
